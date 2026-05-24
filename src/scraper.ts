@@ -133,9 +133,10 @@ async function requestPostalCodeFromCli(): Promise<string> {
 async function main(): Promise<void> {
   const codigoPostal = await requestPostalCodeFromCli();
   const fecha = new Date().toISOString().slice(0, 10);
+  const isHeadless = process.env.HEADLESS === '1' || process.env.HEADLESS === 'true';
   console.log(`Iniciando escaneo: ${new Date().toISOString()}`);
 
-  const browser = await chromium.launch({ headless: process.env.HEADLESS === '1' || process.env.HEADLESS === 'true' });
+  const browser = await chromium.launch({ headless: isHeadless });
   const context = await browser.newContext({
     userAgent:
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
