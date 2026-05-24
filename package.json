@@ -1,29 +1,40 @@
 {
-  "name": "supermarket-mercadona--scraper",
-  "version": "1.0.0",
-  "description": "![Mercadona Cover](LogoMercadona.png)",
-  "main": "index.js",
+  "name": "supermarket-mercadona-scraper",
+  "version": "2.0.0",
+  "description": "TypeScript scraper for Mercadona product catalog",
+  "type": "module",
+  "main": "dist/scraper.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit",
+    "start": "tsx src/scraper.ts",
+    "release:v2": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/symo69/supermarket-mercadona--scraper.git"
   },
-  "keywords": [],
+  "keywords": [
+    "scraper",
+    "mercadona",
+    "typescript",
+    "playwright"
+  ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/symo69/supermarket-mercadona--scraper/issues"
   },
   "homepage": "https://github.com/symo69/supermarket-mercadona--scraper#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
-    "playwright": "^1.60.0"
+    "playwright": "1.60.0"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
-    "tsx": "^4.22.3",
-    "typescript": "^6.0.3"
+    "@types/node": "25.9.1",
+    "tsx": "4.22.3",
+    "typescript": "6.0.3"
   }
 }
