@@ -1,0 +1,29 @@
+{
+  "name": "supermarket-mercadona--scraper",
+  "version": "1.0.0",
+  "description": "![Mercadona Cover](LogoMercadona.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symo69/supermarket-mercadona--scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/symo69/supermarket-mercadona--scraper/issues"
+  },
+  "homepage": "https://github.com/symo69/supermarket-mercadona--scraper#readme",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}
